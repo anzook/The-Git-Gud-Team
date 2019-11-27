@@ -1,0 +1,37 @@
+
+#mainHeader {
+  height: 200px;
+  padding: 0;
+}
+
+.MyHeader {
+  background-color: white;
+  min-height: 100px;
+}
+
+#mainNav {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+
+
+#mainNav a{
+  color: white;
+  font-weight: bold;
+}
+ #picGrid {
+  background: linear-gradient(0deg,rgba(76, 0, 255, 0.3),rgba(162, 0, 255, 0.3)), url('./images/hero_baltimore_inner_harbor.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 300px;
+  z-index: -1;
+}
+
+.endFooter {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+
+
