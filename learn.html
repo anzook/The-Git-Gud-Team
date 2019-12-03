@@ -16,37 +16,48 @@
 </head>
 
 <body>
-  <header class="mdl-layout__header MyHeader">
-    <h1 style="text-align: center; color: blue; margin-bottom: 0px;">Cohort Collab</h1>
-    <h2 style="text-align: center; color: blue">Welcome to the Learning Page</h2>
-  </header>
-
-
-  <!-- Navigation Bar -->
-  <div>
-    <div class="mdl-grid" id="mainNav">
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.html">Homepage</a>
-        </nav>
+    <header class="mdl-layout__header MyHeader">
+        <div>
+          <div class="mdl-grid" id="picGrid">
+            <div class="mdl-cell mdl-cell--4-col"></div>
+            <div class="mdl-cell mdl-cell--4-col"></div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <h1 style="text-align: center; color: white; margin-top: 5px; margin-bottom: 0px;">Cohort Collab</h1>
+              <h5 style="text-align: center; color: white; margin-top: 0px;">Welcome to Cohort Collab's Technology
+                Website. We are located in Baltimore.</h5>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+    
+      <!-- Navigation Bar -->
+      <div>
+        <div class="mdl-grid" id="mainNav">
+          <div class="mdl-cell mdl-cell--3-col">
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="index.html">Homepage</a>
+            </nav>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="subject.html">News Articles</a>
+            </nav>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
+            </nav>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
+            </nav>
+          </div>
+        </div>
       </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="subject.html">News Articles</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
-        </nav>
-      </div>
-    </div>
-  </div>
+    
+    
 
 
   <div class="mdl-grid">
@@ -99,7 +110,12 @@
     </div>
   </div>
 
-  <footer class="footer"></footer>
+  <footer class="mdl-mini-footer footer">
+    <div class="mdl-mini-footer__left-section">
+      <p class="footerParagraph">Cohort Collab, Inc.</p>
+      <p class="footerParagraph">JHU Bootcamp</p>
+    </div>
+  </footer>
 
 
   <script src="assets/team.js"></script>

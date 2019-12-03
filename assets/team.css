@@ -44,10 +44,11 @@
     text-align: center;
   }
 
-.endFooter {
-  background-color: dodgerblue;
+.footerParagraph {
   color: white;
   font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .footer {
