@@ -34,4 +34,6 @@
   font-weight: bold;
 }
 
-
+.switch-labels {
+    margin-left: 10px;
+}
