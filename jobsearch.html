@@ -15,7 +15,13 @@
 </head>
 
 <body>
-    <h1>This is the Job Page</h1>
+
+    <header class="mdl-layout__header MyHeader">
+        <h1 style="text-align: center; color: blue; margin-bottom: 0px;">Cohort Collab</h1>
+        <h2 style="text-align: center; color: blue">Welcome to the Job Page</h2>
+    </header>
+
+
     <div>
         <div>
             <div class="mdl-grid" id="mainNav">
@@ -26,7 +32,7 @@
                 </div>
                 <div class="mdl-cell mdl-cell--3-col">
                     <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="subject.html">Subject</a>
+                        <a class="mdl-navigation__link" href="subject.html">News Articles</a>
                     </nav>
                 </div>
                 <div class="mdl-cell mdl-cell--3-col">
@@ -36,14 +42,34 @@
                 </div>
                 <div class="mdl-cell mdl-cell--3-col">
                     <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="learn.html">Learn</a>
+                        <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
                     </nav>
                 </div>
             </div>
         </div>
+    </div>
+
+   
+    <div class="flex-container" id="searchArea">
+
+        <form>
+            <input type="search">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                Button
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                Reset
+            </button>
+        </form>
+
+    </div>
 
 
-        <script src="assets/team.js"></script>
+
+
+
+
+    <script src="assets/team.js"></script>
 </body>
 
 </html>

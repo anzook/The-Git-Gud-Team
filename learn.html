@@ -1,49 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-       
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="assets/team.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <title>subject</title>
-           
-    
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="assets/team.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <title>subject</title>
+
 </head>
 
 <body>
-    <h1>This is a test</h1>
-    <div>
-            <div>
-                    <div class="mdl-grid" id="mainNav">
-                      <div class="mdl-cell mdl-cell--3-col">
-                        <nav class="mdl-navigation">
-                          <a class="mdl-navigation__link" href="index.html">Homepage</a>
-                        </nav>
-                      </div>
-                      <div class="mdl-cell mdl-cell--3-col">
-                        <nav class="mdl-navigation">
-                          <a class="mdl-navigation__link" href="subject.html">Subject</a>
-                        </nav>
-                      </div>
-                      <div class="mdl-cell mdl-cell--3-col">
-                        <nav class="mdl-navigation">
-                          <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
-                        </nav>
-                      </div>
-                      <div class="mdl-cell mdl-cell--3-col">
-                        <nav class="mdl-navigation">
-                          <a class="mdl-navigation__link" href="learn.html">Learn</a>
-                        </nav>
-                      </div>
-                    </div>
-    </div>
-    
+  <header class="mdl-layout__header MyHeader">
+    <h1 style="text-align: center; color: blue; margin-bottom: 0px;">Cohort Collab</h1>
+    <h2 style="text-align: center; color: blue">Welcome to the Learning Page</h2>
+  </header>
 
-    <script src="assets/team.js"></script>
+
+  <!-- Navigation Bar -->
+  <div>
+    <div class="mdl-grid" id="mainNav">
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">Homepage</a>
+        </nav>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="subject.html">News Articles</a>
+        </nav>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
+        </nav>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="mdl-card">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Javascript Basics</h2>
+        </div>
+        <div class="mdl-card__subtitle-text">
+          <a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank">
+            <img src="http://i3.ytimg.com/vi/W6NZfCO5SIk/hqdefault.jpg" width="220" height="140" style="padding:20px;">
+          </a>
+        </div>
+        <div class="mdl-card__supporting-text">
+          A JavaScript tutorial for beginners to learn JavaScript basics in one hour.
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="mdl-card">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">JQuery Tutorial</h2>
+        </div>
+        <div class="mdl-card__subtitle-text">
+          <a href="https://www.youtube.com/watch?v=BWXggB-T1jQ" target="_blank">
+            <img src="http://i3.ytimg.com/vi/BWXggB-T1jQ/hqdefault.jpg" width="220" height="140" style="padding:20px;">
+          </a>
+        </div>
+        <div class="mdl-card__supporting-text">
+          This is a turtorial about JQuery basics for a little over 1 hour.
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="mdl-card">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Review HTML and CSS</h2>
+        </div>
+        <div class="mdl-card__subtitle-text">
+          <a href="https://www.youtube.com/watch?v=8gNrZ4lAnAw" target="_blank">
+            <img src="http://i3.ytimg.com/vi/8gNrZ4lAnAw/hqdefault.jpg" width="220" height="140" style="padding:20px;">
+          </a>
+        </div>
+        <div class="mdl-card__supporting-text">
+          This video is a tutorial of HTML and CSS with a little JavaScript. The video is 2 hours and 40 mins.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"></footer>
+
+
+  <script src="assets/team.js"></script>
 </body>
+
 </html>
