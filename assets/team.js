@@ -1,6 +1,5 @@
 var queryURL = 'https://newsapi.org/v2/everything?' +
     'q=coding&' +
-    'q=careers&' +
     'sortBy=popularity&' +
     'apiKey=e011fc0c8f0d40038e7cf2dd4acb67ff';
 $.ajax({

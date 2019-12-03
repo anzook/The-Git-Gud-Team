@@ -32,8 +32,9 @@
 
 .endFooter {
   background-color: dodgerblue;
-  color: black;
-  font-weight: bold;
+  color: white;
+  font-size: small;
+  justify-content: center;
 }
 
 #doctitle{
