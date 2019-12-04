@@ -16,47 +16,41 @@
 
 <body>
 
-    <header class="mdl-layout__header MyHeader">
-        <div>
-            <div class="mdl-grid" id="picGrid">
-                <div class="mdl-cell mdl-cell--4-col"></div>
-                <div class="mdl-cell mdl-cell--4-col"></div>
-                <div class="mdl-cell mdl-cell--4-col">
-                    <h1 style="text-align: center; color: white; margin-top: 5px; margin-bottom: 0px;">Cohort Collab
-                    </h1>
-                    <h5 style="text-align: center; color: white; margin-top: 0px;">Welcome to Cohort Collab's Technology
-                        Website. We are located in Baltimore.</h5>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-    <!-- Navigation Bar -->
-    <div>
-        <div class="mdl-grid" id="mainNav">
-            <div class="mdl-cell mdl-cell--3-col">
-                <nav class="mdl-navigation">
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+                <header class="mdl-layout__header mdl-layout__header--transparent">
+                  <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Welcome</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation -->
+                    <nav class="mdl-navigation">
+                      <a class="mdl-navigation__link" href="index.html">HOME</a>
+                      <a class="mdl-navigation__link" href="jobsearch.html">JOB SEARCH</a>
+                      <a class="mdl-navigation__link" href="learn.html">LEARNING PAGE</a>
+                    </nav>
+                  </div>
+                </header>
+                <div class="mdl-layout__drawer">
+                  <span class="mdl-layout-title">Explore</span>
+                  <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.html">Homepage</a>
-                </nav>
-            </div>
-            <div class="mdl-cell mdl-cell--3-col">
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="subject.html">News Articles</a>
-                </nav>
-            </div>
-            <div class="mdl-cell mdl-cell--3-col">
-                <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
-                </nav>
-            </div>
-            <div class="mdl-cell mdl-cell--3-col">
-                <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
-                </nav>
+                  </nav>
+                </div>
+                <main class="mdl-layout__content">
+                </main>
+              </div>
+            </header>
+          
+            <div>
+              <div class="mdl-grid" id="picGrid">
+                <h1 id="doctitle">Cohort Collab</h1>
+                <div class="mdl-cell mdl-cell--12-col">
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
 
 
     <div class="mdl-grid" id="jobSearchArea">
@@ -76,6 +70,14 @@
                     <a href="(URL or function)">Related Action</a>
                 </div>
             </div>
+            <div class="mdl-cell mdl-cell--3-col">
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="learn.html">Learn</a>
+                </nav>
+            </div>
+        </div>
+        <div>
+            <span class="mdl-badge" data-badge="♥">Favorites</span>
         </div>
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--8-col">
@@ -87,6 +89,10 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                     Reset
                 </button>
+            </div>
+
+
+            <!-- <div class="flex-container" id="searchArea">
 
             </div>
 
@@ -120,20 +126,69 @@
             </div>
         </div>
     </div>
+-->
 
-    </div>
-    <footer class="mdl-mini-footer footer">
-        <div class="mdl-mini-footer__left-section">
-            <p class="footerParagraph">Cohort Collab, Inc.</p>
-            <p class="footerParagraph">JHU Bootcamp</p>
         </div>
-    </footer>
+       
+        <div class="mdl-grid">
+            <div class="mdl-cell">
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                    <input type="checkbox" id="switch-1" class="mdl-switch__input">
+                    <span class="mdl-switch__label">Front end developer </span>
+                    <!-- <span class="switch-labels"> </span> -->
+                </label>
 
-    </footer>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                    <input type="checkbox" id="switch-2" class="mdl-switch__input">
+                    <span class="mdl-switch__label"> User-experience </span>
+                    <!-- <span class="switch-labels">  </span> -->
+                </label>
 
+                <!-- Simple Textfield -->
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="search-input">
+                        <label class="mdl-textfield__label" for="sample1">Text...</label>
+                        <!-- Accent-colored raised button with ripple -->
+                    </div>
+                    <button id="search-btn"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
 
+        <div class="mdl-grid">
+            <div id="job-results" class="mdl-cell">
+                <!-- example card below -->
+                <!-- <div class="mdl-card">
+                        <div class="mdl-card__title">
+                          <h2 class="mdl-card__title-text">Job result 1</h2>
+                        </div>
+                        <div class="mdl-card__media">
+                          <img src="photo.jpg" width="220" height="140" border="0" alt="" style="padding:20px;">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                          This text might describe the job and provide further information.
+                        </div>
+                        <div class="mdl-card__actions">
+                          <a href="(URL or function)">Link to job</a>
+                        </div>
+                      </div> -->
+            </div>
+        </div>
 
-    <script src="assets/team.js"></script>
+        <footer class="mdl-mini-footer footer">
+            <div class="mdl-mini-footer__left-section">
+                <p class="footerParagraph">Cohort Collab, Inc.</p>
+                <p class="footerParagraph">JHU Bootcamp</p>
+                <p class="footerParagraph">2019 &copy; Cohort Collab | All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery.js"></script>
+
+        <script src="assets/team.js"></script>
 </body>
 
 </html>

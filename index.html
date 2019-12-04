@@ -8,85 +8,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <link rel="stylesheet" href="assets/team.css">
   <title>Cohort Collab</title>
 </head>
 
 <body>
-  <!-- Title  -->
-  <header class="mdl-layout__header MyHeader">
-    <div>
-      <div class="mdl-grid" id="picGrid">
-        <div class="mdl-cell mdl-cell--4-col"></div>
-        <div class="mdl-cell mdl-cell--4-col"></div>
-        <div class="mdl-cell mdl-cell--4-col">
-          <h1 style="text-align: center; color: white; margin-top: 5px; margin-bottom: 0px;">Cohort Collab</h1>
-          <h5 style="text-align: center; color: white; margin-top: 0px;">Welcome to Cohort Collab's Technology
-            Website. We are located in Baltimore.</h5>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Welcome</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.html">HOME</a>
+            <a class="mdl-navigation__link" href="jobsearch.html">JOB SEARCH</a>
+            <a class="mdl-navigation__link" href="learn.html">LEARNING PAGE</a>
+          </nav>
         </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Navigation Bar -->
-  <div>
-    <div class="mdl-grid" id="mainNav">
-      <div class="mdl-cell mdl-cell--3-col">
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Explore</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="index.html">Homepage</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="subject.html">News Articles</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
         </nav>
       </div>
-    </div>
-  </div>
+    </div>  
+  </header>
 
-
-
-
-  <div class="mdl-grid"></div>
   <div>
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--4-col divCenter">
-        <img src="assets/images/network.svg" alt="#" style="width: 50%;">
-        <h5>Networking</h5>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col divCenter">
-        <img src="assets/images/search.svg" alt="#" style="width: 40%; margin-top: 9%;">
-        <h5>Search</h5>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col divCenter">
-        <img src="assets/images/solutions-512.png" alt="#" style="width: 50%;">
-        <h5>Learning</h5>
+    <div class="mdl-grid" id="picGrid">
+      <h1 id="doctitle">Cohort Collab</h1>
+      <div class="mdl-cell mdl-cell--12-col">
       </div>
     </div>
   </div>
-  </div>
 
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col" id="news">
+      <div id="newsTitle">
+        <h2>Stay In The Know</h2>
+        <h4>Get the lastest coding news from around the country.</h4>
+      </div>
+      <div id="newsList"></div>
+    </div>
+  </div>
 
   <footer class="mdl-mini-footer footer">
     <div class="mdl-mini-footer__left-section">
       <p class="footerParagraph">Cohort Collab, Inc.</p>
       <p class="footerParagraph">JHU Bootcamp</p>
+      <p class="footerParagraph">2019 &copy; Cohort Collab | All Rights Reserved.</p>
     </div>
   </footer>
 
 
 
+   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/team.js"></script>
 </body>
 
