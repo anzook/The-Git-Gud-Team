@@ -71,27 +71,46 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
         }).then(function (response) {
             console.log(response);
 
-            var newJob = $("<div>");
-            newJob.addClass("mdl-card");
+            var results = response.results;
 
-            var jobTitle = $("<h2>")
-            jobTitle.addClass("mdl-card__title-text");
-            jobTitle.html(response.results[0].title);
-            var jobCompany = $("<h3>");
-            jobCompany.text(response.results[0].company.display_name);
+            var newContainer = $("<div>");
+                newContainer.addClass("mdl-layout mdl-js-layout mdl-color--grey-100")
+            var newMain = $("<main>");
+                newMain.addClass("mdl-layout__content");
+            var newGrid = $("<div>");
+                newGrid.addClass("mdl-grid").attr('id', 'job-cards');
 
-            var jobInfo = $("<div>");
-            jobInfo.addClass("mdl-card__supporting-text");
-            jobInfo.html(response.results[0].description);
+                $("#job-results").append(newContainer).append(newMain).append(newGrid);
 
-            var jobLinkDiv = $("<div>");
-            jobLinkDiv.addClass("mdl-card__actions")
-            var jobLink = $("<a />")
-            jobLink.attr("href", response.results[0].redirect_url);
-            jobLinkDiv.append(jobLink);
+            for (var i=0; i<results.length; i++) {
 
-            newJob.append(jobTitle).append(jobCompany).append(jobInfo).append(jobLinkDiv);
-            $("#job-results").append(newJob);
+                var newJob = $("<div>");
+                newJob.addClass("mdl-card mdl-cell mdl-cell--8-col mdl-shadow--2dp");
+                var jobTitleDiv = $("<div>")
+                var jobTitle = $("<h2>")
+                jobTitleDiv.addClass("<div class=\"mdl-card__title\">");
+                jobTitle.addClass("mdl-card__title-text");
+                jobTitle.html(response.results[i].title);
+                jobTitleDiv.append(jobTitle);
+
+                var jobCompany = $("<h3>");
+                jobCompany.text(response.results[i].company.display_name);
+    
+                var jobInfo = $("<div>");
+                jobInfo.addClass("mdl-card__supporting-text");
+                jobInfo.html(response.results[i].description);
+    
+                var jobLinkDiv = $("<div>");
+                jobLinkDiv.addClass("mdl-card__actions")
+                var jobLink = $("<a />")
+                jobLink.text("Adunza Job Link").attr("href", response.results[i].redirect_url);
+                jobLinkDiv.append(jobLink);
+    
+                newJob.append(jobTitleDiv).append(jobCompany).append(jobInfo).append(jobLinkDiv);
+                $("#job-cards").append(newJob);
+            }
+
+        
         });
     });
     //     //Authenticjob API flow
