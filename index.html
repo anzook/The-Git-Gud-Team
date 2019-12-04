@@ -2,116 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cohort Collab</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="assets/style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="assets/team.css">
+  <title>Cohort Collab</title>
 </head>
 
 <body>
-    <h1 style="padding-left: 40%;">Cohort Collab</h1>
-    <p style="padding-left: 43%;">Where coding cohorts come to connect</p>
-
-    <style>
-        .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type {
-            padding-right: 0;
-        }
-    </style>
-
-    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
-        <header class="mdl-layout__header mdl-layout__header--waterfall">
-            <!-- Top row, always visible -->
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Collab</span>
-                <div class="mdl-layout-spacer"></div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                    mdl-textfield--floating-label mdl-textfield--align-right">
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
-                        <i class="material-icons">search</i>
-                    </label>
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
-                    </div>
-                </div>
-            </div>
-            <!-- Bottom row, not visible on scroll -->
-            <div class="mdl-layout__header-row">
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">About</a>
-                    <a class="mdl-navigation__link" href="">Meetup</a>
-                    <a class="mdl-navigation__link" href="">Job Search</a>
-                    <a class="mdl-navigation__link" href="">Resources</a>
-                    <a class="mdl-navigation__link" href="">Contact</a>
-                </nav>
-                    
-            </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Title</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">About</a>
-                <a class="mdl-navigation__link" href="">Meetup</a>
-                <a class="mdl-navigation__link" href="">Job Search</a>
-                <a class="mdl-navigation__link" href="">Resources</a>
-                
-            </nav>
-        </div>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <!-- Your content goes here -->
-                <h2>Search Groups</h2>
-                <p>A quick test to check the layout</p>
-                <input type="text">
-                <!--when you add some text here and click add.should add to list and should be able to toggle if you want it to be included in the search-->
-
-               <div>
-                    <div class = "mdl-grid" id="sidebar">
-                        <div class = "mdl-cell-mdl--5-col">
-
-                        </div>
-                    </div>
-               </div>
-
-            </div>
-        </main>
+  <!-- Title  -->
+  <div>
+    <!-- <div class="mdl-layout__title" id="mainHeader"> -->
+    <header class="mdl-layout__header MyHeader">
+      <h1 style="text-align: center; color: blue; margin-bottom: 0px;">Cohort Collab</h1>
+      <span style="text-align: center; color: black; margin-bottom: 20px;">We are Baltimore Cohort Collab and Welcome to
+        our Technology
+        Website.</span>
+    </header>
+  </div>
+  </div>
+  <!-- Navigation Bar -->
+  <div>
+    <div class="mdl-grid" id="mainNav">
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">Homepage</a>
+        </nav>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="subject.html">Subject</a>
+        </nav>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
+        </nav>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="learn.html">Learn</a>
+        </nav>
+      </div>
     </div>
-    <br>
-    <br>
-    <br>
+  </div>
 
-    <div  class="resultsTitle">
-        
-        <div class="actualResults">
-            <!-- data from api goes here -->
-            <!-- Job title -->
-            <!-- business -->
-            <!-- location -->
-            <!-- salary?? -->
-        </div>
-
-
-
+  <div>
+    <div class="mdl-grid" id="picGrid">
+      <div class="mdl-cell mdl-cell--12-col">
+      </div>
     </div>
+  </div>
+
+  <div class="mdl-grid"></div>
+  <div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col">
+        <img src="assets/images/network.svg" alt="#" style="width: 60%; margin-left: 20%;">
+        <h5 style="text-align: center;">Networking</h5>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <img src="assets/images/search.svg" alt="#"
+          style="width: 50%; margin-left: 30%; margin-top: 10%;">
+        <h5 style="text-align: center;">Search</h5>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <img src="assets/images/solutions-512.png" alt="#" style="width: 60%; margin-left: 20%;">
+        <h5 style="text-align: center;">Learning</h5>
+      </div>
+    </div>
+  </div>
 
 
-  
+
+  </div>
+  <footer class="mdl-mini-footer endFooter">
+    <div class="mdl-mini-footer__left-section">
+      <p>Mini-footer Heading</p>
+    </div>
+  </footer>
 
 
-
-
-
-
-
-
-
+  <script src="assets/team.js"></script>
 </body>
 
 </html>
