@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
         event.preventDefault();
         //clears out the div to add new search items
         $("#job-results").empty();
-     
+
 
         var queryURLadunza = "https://api.adzuna.com/v1/api/jobs/us/search/1?";
         var queryParamsadunza = {
@@ -25,34 +25,38 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
             "what": "",
             // "content-type": "application/json"
         };
-//builds search parameters based upon selections
-        if(document.getElementById('list-checkbox-1').checked) { //full stack
+        //builds search parameters based upon selections
+        if (document.getElementById('list-checkbox-1').checked) { //full stack
             queryParamsadunza.what += 'full stack ';
         }
 
-        if(document.getElementById('list-checkbox-2').checked) { //front end
+        if (document.getElementById('list-checkbox-2').checked) { //front end
             queryParamsadunza.what += 'html css ';
         }
 
-        if(document.getElementById('list-checkbox-3').checked) {  //back end
+        if (document.getElementById('list-checkbox-3').checked) {  //back end
             queryParamsadunza.what += 'javascript ';
         }
 
-        if(document.getElementById('list-checkbox-4').checked) {  // UI / UX
+        if (document.getElementById('list-checkbox-4').checked) {  // UI / UX
             queryParamsadunza.what += 'user experience interaction ';
 
         }
 
-        if(document.getElementById('list-checkbox-5').checked) {  //Digital Marketing
+        if (document.getElementById('list-checkbox-5').checked) {  //Digital Marketing
             queryParamsadunza.what += 'digital marketing ';
 
         }
 
-        if(document.getElementById('list-option-1').checked) {
+        if ($("#search-other") !== "") {
+            queryParamsadunza.what += $("#search-other").val();
+        }
+
+        if (document.getElementById('list-option-1').checked) {
             queryParamsadunza.where = 'baltimore';
-        } else if(document.getElementById('list-option-2').checked) {
+        } else if (document.getElementById('list-option-2').checked) {
             queryParamsadunza.where = 'philadelphia';
-        } else  if(document.getElementById('list-option-3').checked) {
+        } else if (document.getElementById('list-option-3').checked) {
             queryParamsadunza.where = 'washington, dc';
         }
 
@@ -117,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
                 var buttonId = results[i].id;
                 var favoriteBtn = $('<button/>', {
                     // text: 'Favorite',
-                    id: 'btn-'+buttonId,
+                    id: 'btn-' + buttonId,
                     value: 'off',
                     class: 'fav-btn'
                 });
@@ -146,35 +150,105 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
 
 
     //saved job on favorite click
-    $(document).on('click', 'button.fav-btn', function(event) {
+    $(document).on('click', 'button.fav-btn', function (event) {
         event.preventDefault();
         console.log(this);
         var jobID = $(this).attr('id').slice(4);
 
-        if ( $(this).attr('value') === 'off' ) {
+        if ($(this).attr('value') === 'off') {
             $(this).find('i').text('favorite');
-            $(this).attr('value') = 'on';
+            $(this).attr('value', 'on');
             for (var i = 0; i < results.length; i++) {
-                if ( results.id === jobID) {
+                if (results[i].id === jobID) {
                     savedJobs.push(results[i]);
                 }
-            } 
+            }
 
         } else {
             $(this).find('i').text('favorite_border');
-            $(this).attr('value') = 'off';
+            $(this).attr('value', 'off');
 
-            for (var i = 0; i < results.length; i++) {
-                if ( results.id === jobID) {
-                    savedJobs.splice(i, 1);
-                }
-            }  
+            //finds and removes index in saved array
+            function isID(element) {
+                return element.id === jobID;
+              }
+
+            var arrindex = savedJobs.findIndex(isID);
+            savedJobs.splice(arrindex, 1);
         }
-            // return false;
-     });
+
+        localStorage.setItem("saved-jobs", JSON.stringify(savedJobs));
+        // return false;
+    });
+
+    //display fovrited jobs
+    $("#show-fav-btn").on("click", function (event) {
+
+        // (in addition to clicks). Prevents the page from reloading on form submit.
+        event.preventDefault();
+        //clears out the div to add new search items
+        $("#job-results").empty();
+        var savedJobs = JSON.parse(localStorage.getItem("saved-jobs") || "[]");
+
+        console.log(savedJobs);
+        var newContainer = $("<div>");
+        newContainer.addClass("mdl-layout mdl-js-layout mdl-color--grey-100")
+        var newMain = $("<main>");
+        newMain.addClass("mdl-layout__content");
+        var newGrid = $("<div>");
+        newGrid.addClass("mdl-grid").attr('id', 'job-cards');
+
+        $("#job-results").append(newContainer).append(newMain).append(newGrid);
+
+        for (var i = 0; i < savedJobs.length; i++) {
+
+            var newJob = $("<div>");
+            newJob.attr("style", "margin: 20px; padding: 15px; background: whitesmoke;");
+            newJob.addClass("demo-card-wide mdl-card mdl-shadow--2dp");
+            var jobTitleDiv = $("<div>")
+            var jobTitle = $("<p>")
+            jobTitleDiv.addClass("mdl-card__title");
+            jobTitle.addClass("mdl-card__title-text");
+            jobTitle.attr("style", "font-size: 18px; font-weight: bold; text-align: center;");
+            jobTitle.html(savedJobs[i].title);
+            jobTitleDiv.append(jobTitle);
 
 
-//BLS API for employment data
+            var jobCompany = $("<h6>");
+            jobCompany.text("Company: " + savedJobs[i].company.display_name);
+
+            var jobInfo = $("<div>");
+            jobInfo.addClass("mdl-card__supporting-text");
+            jobInfo.html(savedJobs[i].description);
+
+            var jobLinkDiv = $("<div>");
+            jobLinkDiv.addClass("mdl-card__actions");
+            var jobLink = $("<a />");
+            jobLink.text("Details").attr("href", savedJobs[i].redirect_url);
+            jobLink.attr("style", "color: dodgerblue; text-decoration: none;");
+            jobLinkDiv.append(jobLink);
+
+            var favoriteDiv = $("<div>");
+            // favoriteDiv.addClass("mdl-card__actions");
+            var buttonId = savedJobs[i].id;
+            var favoriteBtn = $('<button/>', {
+                // text: 'Favorite',
+                id: 'btn-' + buttonId,
+                value: 'on',
+                class: 'fav-btn'
+            });
+            favoriteBtn.addClass("mdl-button mdl-js-button mdl-button--icon mdl-button--colored");
+            favoriteBtn.append("<i class=\"material-icons\">favorite</i>");
+            favoriteDiv.append(favoriteBtn);
+
+
+            newJob.append(jobTitleDiv).append(jobCompany).append(jobInfo).append(jobLinkDiv).append(favoriteDiv);
+            $("#job-cards").append(newJob);
+        }
+    });
+
+
+    //BLS API for employment data
     $("#search-btn").on("click", function (event) {
 
         // (in addition to clicks). Prevents the page from reloading on form submit.
@@ -207,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
         var queryURLBLS = queryURLBLS + seriesIDBLS;
         console.log("---------------\nURL: " + queryURLBLS + "\n---------------");
 
-            //disabled for testing
+        //disabled for testing
         // $.ajax({
         //     url: queryURLBLS,
         //     method: 'GET',
@@ -224,36 +298,36 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
     });
 
     var queryURL = 'https://newsapi.org/v2/everything?' +
-    'qInTitle=coding%20OR%20(software%20development)&' +
-    'sortBy=popularity&' +
-    'apiKey=e011fc0c8f0d40038e7cf2dd4acb67ff';
+        'qInTitle=coding%20OR%20(software%20development)&' +
+        'sortBy=popularity&' +
+        'apiKey=e011fc0c8f0d40038e7cf2dd4acb67ff';
 
-console.log(queryURL);
+    console.log(queryURL);
 
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-// })
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
 
-// .then(function (response) {
-//     console.log(response);
+    .then(function (response) {
+        console.log(response);
 
 
 
-//     for (var i = 0; i < 8; i++) {
-//         var newTitle = $("<a>");
-//         newTitle.attr("href", response.articles[i].url);
-//         newTitle.attr("target", "_blank");
-//         newTitle.attr("class", "articleTitleText");
-//         newTitle.attr("style", "color: black; font-weight: bold;");
-//         newTitle.text(i+1 + ". " + response.articles[i].title);
-//         var description = $("<p>");
-//         description.text(response.articles[i].description);
-//         $("#newsList").append(newTitle);
-//         $("#newsList").append(description);
-//     }
+        for (var i = 0; i < 8; i++) {
+            var newTitle = $("<a>");
+            newTitle.attr("href", response.articles[i].url);
+            newTitle.attr("target", "_blank");
+            newTitle.attr("class", "articleTitleText");
+            newTitle.attr("style", "color: black; font-weight: bold;");
+            newTitle.text(i+1 + ". " + response.articles[i].title);
+            var description = $("<p>");
+            description.text(response.articles[i].description);
+            $("#newsList").append(newTitle);
+            $("#newsList").append(description);
+        }
 
-// });
+    });
 
 
 
