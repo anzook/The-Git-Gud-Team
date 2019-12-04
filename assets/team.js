@@ -85,28 +85,39 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
             for (var i=0; i<results.length; i++) {
 
                 var newJob = $("<div>");
-                newJob.addClass("mdl-card mdl-cell mdl-cell--8-col mdl-shadow--2dp");
+                newJob.attr("style", "margin: 20px; padding: 15px; background: whitesmoke;");
+                newJob.addClass("demo-card-wide mdl-card mdl-shadow--2dp");
                 var jobTitleDiv = $("<div>")
-                var jobTitle = $("<h2>")
-                jobTitleDiv.addClass("<div class=\"mdl-card__title\">");
+                var jobTitle = $("<p>")
+                jobTitleDiv.addClass("mdl-card__title");
                 jobTitle.addClass("mdl-card__title-text");
+                jobTitle.attr("style", "font-size: 18px; font-weight: bold; text-align: center;");
                 jobTitle.html(response.results[i].title);
                 jobTitleDiv.append(jobTitle);
 
-                var jobCompany = $("<h3>");
-                jobCompany.text(response.results[i].company.display_name);
+
+                var jobCompany = $("<h6>");
+                jobCompany.text("Company: " + response.results[i].company.display_name);
     
                 var jobInfo = $("<div>");
                 jobInfo.addClass("mdl-card__supporting-text");
                 jobInfo.html(response.results[i].description);
     
                 var jobLinkDiv = $("<div>");
-                jobLinkDiv.addClass("mdl-card__actions")
-                var jobLink = $("<a />")
-                jobLink.text("Adunza Job Link").attr("href", response.results[i].redirect_url);
+                jobLinkDiv.addClass("mdl-card__actions");
+                var jobLink = $("<a />");
+                jobLink.text("Details").attr("href", response.results[i].redirect_url);
+                jobLink.attr("style", "color: dodgerblue; text-decoration: none;");
                 jobLinkDiv.append(jobLink);
+
+                var favoriteDiv = $("<div>");
+                favoriteDiv.addClass("mdl-card__actions");
+                var favoriteBtn = $("<button>");
+                favoriteBtn.text("Add to Favorites");
+                favoriteBtn.attr("style", "color: dodgerblue; text-decoration: none; font-weight: bold;");
+                favoriteDiv.append(favoriteBtn);
     
-                newJob.append(jobTitleDiv).append(jobCompany).append(jobInfo).append(jobLinkDiv);
+                newJob.append(jobTitleDiv).append(jobCompany).append(jobInfo).append(jobLinkDiv).append(favoriteDiv);
                 $("#job-cards").append(newJob);
             }
 
