@@ -11,46 +11,49 @@
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <link rel="stylesheet" href="assets/team.css">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <title>subject</title>
-
+  <title>Learning Page</title>
 </head>
 
 <body>
-  <header class="mdl-layout__header MyHeader">
-    <h1 style="text-align: center; color: blue; margin-bottom: 0px;">Cohort Collab</h1>
-    <h2 style="text-align: center; color: blue">Welcome to the Learning Page</h2>
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Welcome</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">HOME</a>
+          <a class="mdl-navigation__link" href="jobsearch.html">JOB SEARCH</a>
+          <a class="mdl-navigation__link" href="learn.html">LEARNING PAGE</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Explore</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="index.html">Homepage</a>
+        <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
+        <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
+      </nav>
+    </div>
+  </div>
   </header>
 
-
-  <!-- Navigation Bar -->
   <div>
-    <div class="mdl-grid" id="mainNav">
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.html">Homepage</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="subject.html">News Articles</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
-        </nav>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col">
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
-        </nav>
+    <div class="mdl-grid" id="picGrid">
+      <h1 id="doctitle">Cohort Collab</h1>
+      <div class="mdl-cell mdl-cell--12-col">
       </div>
     </div>
   </div>
 
+  <div class="mdl-grid mdl-grid--no-spacing	">
+    <div class="mdl-cell mdl-cell--2-col"></div>
 
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col">
+
+    <div class="mdl-cell mdl-cell--3-col">
       <div class="mdl-card">
         <div class="mdl-card__title">
           <h2 class="mdl-card__title-text">Javascript Basics</h2>
@@ -66,7 +69,7 @@
       </div>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--3-col">
       <div class="mdl-card">
         <div class="mdl-card__title">
           <h2 class="mdl-card__title-text">JQuery Tutorial</h2>
@@ -82,7 +85,7 @@
       </div>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-cell mdl-cell--3-col">
       <div class="mdl-card">
         <div class="mdl-card__title">
           <h2 class="mdl-card__title-text">Review HTML and CSS</h2>
@@ -99,10 +102,59 @@
     </div>
   </div>
 
-  <footer class="footer"></footer>
+  <div class="mdl-cell mdl-cell--1-col"></div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="mdl-grid mdl-grid--no-spacing">
+      <div class="mdl-cell mdl-cell--3-col"></div>
+  
+  
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-card">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Elevator Coding Challenge</h2>
+          </div>
+          <div class="mdl-card__subtitle-text">
+            <a href="https://play.elevatorsaga.com/" target="_blank">
+                <img src="./assets/images/elevator.jpg" width="200" height="140" style="padding:20px;">
+            </a>
+          </div>
+          <div class="mdl-card__supporting-text">
+              This is a game of programming! Your task is to program the movement of elevators, by writing a program in JavaScript.
+          </div>
+        </div>
+      </div>
+  
+      <div class="mdl-cell mdl-cell--4-col">
+        <div class="mdl-card">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Space Wars Challenge</h2>
+          </div>
+          <div class="mdl-card__subtitle-text">
+            <a href="https://www.codingame.com/ide/puzzle/onboarding" target="_blank">
+              <img src="./assets/images/SpaceGame.png" width="220" height="140" style="padding:20px;">
+            </a>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Test your coding ability on multiple development programs with this fun space invader game.
+          </div>
+        </div>
+      </div>
+  
+      <div class="mdl-cell mdl-cell--1-col"></div>
+    </div>
+  
+
+  <footer class="mdl-mini-footer footer">
+    <div class="mdl-mini-footer__left-section">
+      <p class="footerParagraph">Cohort Collab, Inc.</p>
+      <p class="footerParagraph">JHU Bootcamp</p>
+      <p class="footerParagraph">2019 &copy; Cohort Collab | All Rights Reserved.</p>
+    </div>
+  </footer>
 
 
-  <script src="assets/team.js"></script>
-</body>
+  </body>
 
 </html>

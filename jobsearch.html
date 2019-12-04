@@ -15,14 +15,62 @@
 </head>
 
 <body>
-    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-        <header class="mdl-layout__header mdl-layout__header--transparent">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Welcome</span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
+
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+                <header class="mdl-layout__header mdl-layout__header--transparent">
+                  <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Welcome</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation -->
+                    <nav class="mdl-navigation">
+                      <a class="mdl-navigation__link" href="index.html">HOME</a>
+                      <a class="mdl-navigation__link" href="jobsearch.html">JOB SEARCH</a>
+                      <a class="mdl-navigation__link" href="learn.html">LEARNING PAGE</a>
+                    </nav>
+                  </div>
+                </header>
+                <div class="mdl-layout__drawer">
+                  <span class="mdl-layout-title">Explore</span>
+                  <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="index.html">Homepage</a>
+                    <a class="mdl-navigation__link" href="jobsearch.html">Job Search</a>
+                    <a class="mdl-navigation__link" href="learn.html">Learning Page</a>
+                  </nav>
+                </div>
+                <main class="mdl-layout__content">
+                </main>
+              </div>
+            </header>
+          
+            <div>
+              <div class="mdl-grid" id="picGrid">
+                <h1 id="doctitle">Cohort Collab</h1>
+                <div class="mdl-cell mdl-cell--12-col">
+                </div>
+              </div>
+            </div>
+
+
+    <div class="mdl-grid" id="jobSearchArea">
+
+        <div class="mdl-cell mdl-cell--3-col">
+            <div class="mdl-card">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Search History Goes Here</h2>
+                </div>
+
+                <div class="mdl-card__supporting-text">
+                    This text might describe the job searches done by the user and provide information, such as where
+                    and
+                    what jobs they were looking at.
+                </div>
+                <div class="mdl-card__actions">
+                    <a href="(URL or function)">Related Action</a>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col">
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.html">HOME</a>
                     <a class="mdl-navigation__link" href="subject.html">SUBJECT</a>
@@ -40,17 +88,54 @@
                 <a class="mdl-navigation__link" href="learn.html">Learn</a>
             </nav>
         </div>
-    </div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--8-col">
+                <input placeholder="search" type="text">
+                <input placeholder="location" type="text">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Button
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Reset
+                </button>
+            </div>
 
 
+            <!-- <div class="flex-container" id="searchArea">
 
-    <div>
-        <div class="mdl-grid" id="picGrid">
-            <h1 id="doctitle">Cohort Collab</h1>
-            <div class="mdl-cell mdl-cell--12-col">
+            </div>
+
+            <div class="mdl-cell mdl-cell--8-col">
+                <main class="mdl-layout__content">
+                    <div class="page-content">
+                        <table class="mdl-data-table mdl-js-data-table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h5>Job Title</h5>
+                                    </td>
+                                    <td>Brief Synopsis of Job</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5>Job Title</h5>
+                                    </td>
+                                    <td>Brief Synopsis of Job</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5>Job Title</h5>
+                                    </td>
+                                    <td>Brief Synopsis of Job</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
             </div>
         </div>
     </div>
+-->
 
 
     <div class="mdl-grid">
@@ -225,8 +310,16 @@
                           <a href="(URL or function)">Link to job</a>
                         </div>
                       </div> -->
-
+            </div>
         </div>
+
+        <footer class="mdl-mini-footer footer">
+            <div class="mdl-mini-footer__left-section">
+                <p class="footerParagraph">Cohort Collab, Inc.</p>
+                <p class="footerParagraph">JHU Bootcamp</p>
+                <p class="footerParagraph">2019 &copy; Cohort Collab | All Rights Reserved.</p>
+            </div>
+        </footer>
         <script src="https://code.jquery.com/jquery.js"></script>
 
         <script src="assets/team.js"></script>
