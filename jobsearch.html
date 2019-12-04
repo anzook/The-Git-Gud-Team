@@ -52,8 +52,8 @@
               </div>
             </div>
 
-
-    <div class="mdl-grid" id="jobSearchArea">
+<!-- ------------------ start tentative removal ------------------ -->
+    <!-- <div class="mdl-grid" id="jobSearchArea">
 
         <div class="mdl-cell mdl-cell--3-col">
             <div class="mdl-card">
@@ -98,7 +98,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                     Reset
                 </button>
-            </div>
+            </div> -->
 
 
             <!-- <div class="flex-container" id="searchArea">
@@ -137,41 +137,141 @@
     </div>
 -->
 
-        </div>
-       
-        <div class="mdl-grid">
-            <div class="mdl-cell">
-                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                    <input type="checkbox" id="switch-1" class="mdl-switch__input">
-                    <span class="mdl-switch__label">Front end developer </span>
-                    <!-- <span class="switch-labels"> </span> -->
-                </label>
+<!-- ------------------ end tentative removal ------------------ -->
 
-                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
-                    <input type="checkbox" id="switch-2" class="mdl-switch__input">
-                    <span class="mdl-switch__label"> User-experience </span>
-                    <!-- <span class="switch-labels">  </span> -->
-                </label>
+    <div class="mdl-grid">
+        <div class="mdl-cell">
 
-                <!-- Simple Textfield -->
-                <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="search-input">
-                        <label class="mdl-textfield__label" for="sample1">Text...</label>
-                        <!-- Accent-colored raised button with ripple -->
-                    </div>
-                    <button id="search-btn"
-                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                        Search
+            <ul id="skill-list-control" class="list-control mdl-list">
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">code</i>
+                        Full Stack
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+                            <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" checked />
+                        </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">view_compact</i>
+                        Front End
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-2">
+                            <input type="checkbox" id="list-checkbox-2" class="mdl-checkbox__input"  />
+                        </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">dns</i>
+                        Back End
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-3">
+                            <input type="checkbox" id="list-checkbox-3" class="mdl-checkbox__input"  />
+                        </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">tune</i>
+                        UI / UX
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-4">
+                            <input type="checkbox" id="list-checkbox-4" class="mdl-checkbox__input"  />
+                        </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">drafts</i>
+                        Digital Marketing </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-5">
+                            <input type="checkbox" id="list-checkbox-5" class="mdl-checkbox__input"  />
+                        </label>
+                    </span>
+                </li>
+            </ul>
+
+
+
+
+            <ul id="location-list-control" class="list-control mdl-list">
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">location_city</i>
+                        Baltimore
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+                            <input type="radio" id="list-option-1" class="mdl-radio__button" name="options" value="1"
+                                checked />
+                        </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">location_city</i>
+                        Philadelphia
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+                            <input type="radio" id="list-option-2" class="mdl-radio__button" name="options" value="2" />
+                        </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">location_city</i>
+                        Washington, DC
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-3">
+                            <input type="radio" id="list-option-3" class="mdl-radio__button" name="options" value="3" />
+                        </label>
+                    </span>
+                </li>
+            </ul>
+
+
+            <!-- Simple Textfield -->
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="search-other">
+                    <label class="mdl-textfield__label" for="search-other">Other terms...</label>
+                    <!-- Accent-colored raised button with ripple -->
+                </div>
+                <button id="search-btn"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Search
+                </button>
+                <button id="show-fav-btn"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                Favorites
                     </button>
-                </form>
-            </div>
+            </form>
+
+
+
+            <!-- Icon Toogle 1 example
+ <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-fav">
+    <input type="checkbox" id="icon-fav" class="mdl-icon-toggle__input" />     
+    <i class="mdl-icon-toggle__label material-icons">favorite</i>
+  </label> -->
+
         </div>
 
-        <div class="mdl-grid">
-            <div id="job-results" class="mdl-cell">
-                <!-- example card below -->
-                <!-- <div class="mdl-card">
+        <!-- <div class="mdl-grid" id="job-results"> -->
+        <div id="job-results">
+
+            <!-- example card below -->
+            <!-- <div class="mdl-card">
                         <div class="mdl-card__title">
                           <h2 class="mdl-card__title-text">Job result 1</h2>
                         </div>

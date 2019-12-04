@@ -87,6 +87,10 @@ a.articleTitleText:hover{
   text-decoration: none;
 }
 
+.mdl-switch {
+  margin-bottom: 10px;
+}
+
 .switch-labels {
     padding-left: 15px;
 }
@@ -104,3 +108,10 @@ a.articleTitleText:hover{
   text-align: center;
 }
 
+.list-control {
+  width: 300px;
+}
+
+.list-radio {
+  display: inline;
+}
