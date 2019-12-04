@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
 
         //     // (in addition to clicks). Prevents the page from reloading on form submit.
         event.preventDefault();
+        //clears out the div to add new search items
+        $("#job-results").empty();
+     
 
         var queryURLadunza = "https://api.adzuna.com/v1/api/jobs/us/search/1?";
         var queryParamsadunza = {
@@ -19,9 +22,40 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
             "app_key": appKeyAdunza,
             "where": "baltimore",
             "results_per_page": 12,
-            "what": "javascript",
+            "what": "",
             // "content-type": "application/json"
         };
+//builds search parameters based upon selections
+        if(document.getElementById('list-checkbox-1').checked) { //full stack
+            queryParamsadunza.what += 'full stack ';
+        }
+
+        if(document.getElementById('list-checkbox-2').checked) { //front end
+            queryParamsadunza.what += 'html css ';
+        }
+
+        if(document.getElementById('list-checkbox-3').checked) {  //back end
+            queryParamsadunza.what += 'javascript ';
+        }
+
+        if(document.getElementById('list-checkbox-4').checked) {  // UI / UX
+            queryParamsadunza.what += 'user experience interaction ';
+
+        }
+
+        if(document.getElementById('list-checkbox-5').checked) {  //Digital Marketing
+            queryParamsadunza.what += 'digital marketing ';
+
+        }
+
+        if(document.getElementById('list-option-1').checked) {
+            queryParamsadunza.where = 'baltimore';
+        } else if(document.getElementById('list-option-2').checked) {
+            queryParamsadunza.where = 'philadelphia';
+        } else  if(document.getElementById('list-option-3').checked) {
+            queryParamsadunza.where = 'washington, dc';
+        }
+
 
         //     //Grab text the user typed into the search input, add to the queryParams object
         //     // queryParams.what = $("#search-input")
@@ -84,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
                 var favoriteBtn = $('<button/>', {
                     // text: 'Favorite',
                     id: 'btn-'+buttonId,
+                    value: 'off',
                     class: 'fav-btn'
                 });
                 favoriteBtn.addClass("mdl-button mdl-js-button mdl-button--icon mdl-button--colored");
@@ -114,31 +149,30 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
     $(document).on('click', 'button.fav-btn', function(event) {
         event.preventDefault();
         console.log(this);
-        var jobID = $(this).attr("id").slice(3);
-        $(this).find('i').text('favorite');
-        // this.html("<i class=\"material-icons\">favorite</i>");
-        for (var i = 0; i < results.length; i++) {
-            if ( results.id === jobID) {
-                savedJobs.push(results[i]);
+        var jobID = $(this).attr('id').slice(4);
 
-            }
-        }        
+        if ( $(this).attr('value') === 'off' ) {
+            $(this).find('i').text('favorite');
+            $(this).attr('value') = 'on';
+            for (var i = 0; i < results.length; i++) {
+                if ( results.id === jobID) {
+                    savedJobs.push(results[i]);
+                }
+            } 
+
+        } else {
+            $(this).find('i').text('favorite_border');
+            $(this).attr('value') = 'off';
+
+            for (var i = 0; i < results.length; i++) {
+                if ( results.id === jobID) {
+                    savedJobs.splice(i, 1);
+                }
+            }  
+        }
             // return false;
      });
 
-    // $(".fav-btn").on("click", function (event) {
-    //     event.preventDefault();
-    //     console.log(this);
-    //     var jobID = $(this).slice(3, attr("id"));
-    //     $(this).find('i').text('favorite');
-    //     // this.html("<i class=\"material-icons\">favorite</i>");
-    //     for (var i = 0; i < results.length; i++) {
-    //         if ( results.id === jobID) {
-    //             savedJobs.push(results[i]);
-
-    //         }
-    //     }
-    // });
 
 //BLS API for employment data
     $("#search-btn").on("click", function (event) {
@@ -173,18 +207,19 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
         var queryURLBLS = queryURLBLS + seriesIDBLS;
         console.log("---------------\nURL: " + queryURLBLS + "\n---------------");
 
-        $.ajax({
-            url: queryURLBLS,
-            method: 'GET',
-            // headers: {
-            //     // "Host": host,
-            //     // "User-Agent": userAgent,
-            //     "Authorization-Key": authKey,
-            // }
-        }).then(function (response) {
-            console.log(response);
-            // var data = JSON.parse(body);  
-        });
+            //disabled for testing
+        // $.ajax({
+        //     url: queryURLBLS,
+        //     method: 'GET',
+        //     // headers: {
+        //     //     // "Host": host,
+        //     //     // "User-Agent": userAgent,
+        //     //     "Authorization-Key": authKey,
+        //     // }
+        // }).then(function (response) {
+        //     console.log(response);
+        //     // var data = JSON.parse(body);  
+        // });
 
     });
 
