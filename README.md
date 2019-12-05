@@ -20,7 +20,7 @@ As with everything this is a work in progress but we wanted to at least show the
 In order to get a feel for how the api's are being called as well as the different design qualities, our javascript and css pages are located in the assets/ folder. There are a lot of comments in there which will help further explain the step by step process of the project. 
 
 Current contributors:
-Alex A
+Alex Z
 Jordyn S
 Tina L
 Jody J
