@@ -52,20 +52,25 @@
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: small;
-  justify-content: center;
+  text-align: center;
+
 }
 
 #doctitle{
   color: white;
+  font-weight: bolder;
+  font-size: 70px;
+  text-shadow:6px 6px 6px black;
   padding-left: 60px;
   padding-top: 60px;
 }
 
 #newsTitle{
   text-align: center;
-  background-color: black;
-  color: whitesmoke;
+  color: black;
   padding: 15px;
+  font-weight: bolder;
+  text-shadow:1px 1px 1px grey;
 }
 
 #newsList{
@@ -83,8 +88,12 @@
   margin: 60px 0;
 }
 
-a.articleTitleText:hover{
+.articleTitleText{
   text-decoration: none;
+  
+}
+a.articleTitleText:hover{
+  text-decoration: underline;
 }
 
 .mdl-switch {
@@ -101,6 +110,8 @@ a.articleTitleText:hover{
   height: 100px;
   width: 100%;
   float: bottom; 
+  justify-content: center;
+  align-items: center;
 }
 
 .divCenter {
@@ -115,3 +126,30 @@ a.articleTitleText:hover{
 .list-radio {
   display: inline;
 }
+
+
+.demo-card-wide{
+  float: left;
+}
+
+
+#location-list-control, #skill-list-control{
+  border: 4px dotted #3f51b5;
+background: #fcfcfcfa;
+  
+}
+
+#newsList{
+  text-align: center;
+  border: 4px dotted #3f51b5;
+  padding: 15px;
+}
+
+#show-fav-btn, #search-btn{
+  background: #3f51b5;
+}
+
+.mdl-list__item-avatar, .mdl-list__item-avatar.material-icons{
+  color: #fcfcfcfa;
+}
+

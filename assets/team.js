@@ -79,14 +79,14 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
 
             results = response.results;
 
-            var newContainer = $("<div>");
-            newContainer.addClass("mdl-layout mdl-js-layout mdl-color--grey-100")
-            var newMain = $("<main>");
-            newMain.addClass("mdl-layout__content");
-            var newGrid = $("<div>");
-            newGrid.addClass("mdl-grid").attr('id', 'job-cards');
+            // var newContainer = $("<div>");
+            // newContainer.addClass("mdl-layout mdl-js-layout mdl-color--grey-100")
+            // var newMain = $("<main>");
+            // newMain.addClass("mdl-layout__content");
+            // var newGrid = $("<div>");
+            // newGrid.addClass("mdl-grid").attr('id', 'job-cards');
 
-            $("#job-results").append(newContainer).append(newMain).append(newGrid);
+            // $("#job-results").append(newContainer).append(newMain).append(newGrid);
 
             for (var i = 0; i < results.length; i++) {
 
@@ -100,22 +100,17 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
                 jobTitle.attr("style", "font-size: 18px; font-weight: bold; text-align: center;");
                 jobTitle.html(results[i].title);
                 jobTitleDiv.append(jobTitle);
-
-
                 var jobCompany = $("<h6>");
                 jobCompany.text("Company: " + results[i].company.display_name);
-
                 var jobInfo = $("<div>");
                 jobInfo.addClass("mdl-card__supporting-text");
                 jobInfo.html(results[i].description);
-
                 var jobLinkDiv = $("<div>");
                 jobLinkDiv.addClass("mdl-card__actions");
                 var jobLink = $("<a />");
                 jobLink.text("Details").attr("href", results[i].redirect_url);
                 jobLink.attr("style", "color: dodgerblue; text-decoration: none;");
                 jobLinkDiv.append(jobLink);
-
                 var favoriteDiv = $("<div>");
                 // favoriteDiv.addClass("mdl-card__actions");
                 var buttonId = results[i].id;
@@ -141,7 +136,8 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
                 // favoriteDiv.append(favoriteLabel);
 
                 newJob.append(jobTitleDiv).append(jobCompany).append(jobInfo).append(jobLinkDiv).append(favoriteDiv);
-                $("#job-cards").append(newJob);
+   
+                $("#job-results").append(newJob);
             }
 
 
@@ -191,14 +187,14 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
         var savedJobs = JSON.parse(localStorage.getItem("saved-jobs") || "[]");
 
         console.log(savedJobs);
-        var newContainer = $("<div>");
-        newContainer.addClass("mdl-layout mdl-js-layout mdl-color--grey-100")
-        var newMain = $("<main>");
-        newMain.addClass("mdl-layout__content");
-        var newGrid = $("<div>");
-        newGrid.addClass("mdl-grid").attr('id', 'job-cards');
+        // var newContainer = $("<div>");
+        // newContainer.addClass("mdl-layout mdl-js-layout mdl-color--grey-100")
+        // var newMain = $("<main>");
+        // newMain.addClass("mdl-layout__content");
+        // var newGrid = $("<div>");
+        // newGrid.addClass("mdl-grid").attr('id', 'job-cards');
 
-        $("#job-results").append(newContainer).append(newMain).append(newGrid);
+        // $("#job-results").append(newContainer).append(newMain).append(newGrid);
 
         for (var i = 0; i < savedJobs.length; i++) {
 
@@ -243,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
 
 
             newJob.append(jobTitleDiv).append(jobCompany).append(jobInfo).append(jobLinkDiv).append(favoriteDiv);
-            $("#job-cards").append(newJob);
+            $("#job-results").append(newJob);
         }
     });
 
@@ -320,7 +316,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
             newTitle.attr("target", "_blank");
             newTitle.attr("class", "articleTitleText");
             newTitle.attr("style", "color: black; font-weight: bold;");
-            newTitle.text(i+1 + ". " + response.articles[i].title);
+            newTitle.text(response.articles[i].title);
             var description = $("<p>");
             description.text(response.articles[i].description);
             $("#newsList").append(newTitle);
