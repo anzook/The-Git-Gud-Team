@@ -313,7 +313,9 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
 
 
         for (var i = 0; i < 8; i++) {
+            var newsDiv = $("<div>");
             var newTitle = $("<a>");
+            console.log(response.articles[i].url);
             newTitle.attr("href", response.articles[i].url);
             newTitle.attr("target", "_blank");
             newTitle.attr("class", "articleTitleText");
@@ -321,8 +323,9 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
             newTitle.text(response.articles[i].title);
             var description = $("<p>");
             description.text(response.articles[i].description);
-            $("#newsList").append(newTitle);
-            $("#newsList").append(description);
+            newsDiv.append(newTitle);
+            newsDiv.append(description);
+            $("#newsList").append(newsDiv);
         }
 
     });
