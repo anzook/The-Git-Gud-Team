@@ -169,3 +169,6 @@ border-radius: 25px;
   color: #fcfcfcfa;
 }
 
+.mdl-layout__container {
+  height: unset;
+}
