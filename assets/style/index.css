@@ -1,0 +1,171 @@
+
+.MyHeader {
+  background-color: white;
+  min-height: 100px;
+  color: dodgerblue;
+
+}
+
+#mainNav {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+.secHeader {
+  background-color: dodgerblue;
+}
+
+
+#mainNav a{
+  color: white;
+  font-weight: bold;
+  padding-left: 30px;
+}
+ #picGrid {
+  background: linear-gradient(0deg, rgba(31, 75, 197, 0.3),rgba(31, 75, 197, 0.3)), url('./images/hero_baltimore_inner_harbor.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 200px;
+  z-index: -1;
+}
+
+.topMargin {
+  margin-top: 15px;
+}
+
+.bottomMargin {
+  margin-bottom: 15px;
+}
+
+.jobCard {
+  width: 30%;
+  height: 400px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#searchArea {
+    float: left;
+    width: 60%;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 200px;
+    text-align: center;
+  }
+
+.footerParagraph {
+  color: white;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: small;
+  text-align: center;
+
+}
+
+#doctitle{
+  color: white;
+  font-weight: bolder;
+  font-size: 70px;
+  text-shadow:6px 6px 6px black;
+  padding-left: 60px;
+  padding-top: 60px;
+}
+
+#newsTitle{
+  text-align: center;
+  color: black;
+  padding: 15px;
+  font-weight: bolder;
+  text-shadow:1px 1px 1px grey;
+}
+
+#newsList{
+  background-color: white;
+  color: black;
+}
+
+#news{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+#icon_div{
+  margin: 60px 0;
+}
+
+.articleTitleText{
+  text-decoration: none;
+  
+}
+a.articleTitleText:hover{
+  text-decoration: underline;
+}
+
+.mdl-switch {
+  margin-bottom: 10px;
+}
+
+.switch-labels {
+    padding-left: 15px;
+}
+
+.footer {
+  color: white;
+  background-color: dodgerblue;
+  height: 100px;
+  width: 100%;
+  float: bottom; 
+  justify-content: center;
+  align-items: center;
+}
+
+.divCenter {
+  justify-content: center;
+  text-align: center;
+}
+
+.list-control {
+  width: 300px;
+}
+
+.list-radio {
+  display: inline;
+}
+
+
+.demo-card-wide{
+  float: left;
+  height: 450px;
+}
+
+.learningCard {
+  border: 4px dotted #3f51b5;
+  background: #fcfcfcfa;
+  border-radius: 25px;
+}
+
+#location-list-control, #skill-list-control{
+  border: 4px dotted #3f51b5;
+background: #fcfcfcfa;
+border-radius: 25px;
+  
+}
+
+#newsList{
+  text-align: center;
+  border: 4px dotted #3f51b5;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+#show-fav-btn, #search-btn{
+  background: #3f51b5;
+}
+
+.mdl-list__item-avatar, .mdl-list__item-avatar.material-icons{
+  color: #fcfcfcfa;
+}
+
