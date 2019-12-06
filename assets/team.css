@@ -27,6 +27,7 @@
   background-size: 100% 100%;
   min-height: 200px;
   z-index: -1;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 .topMargin {
@@ -159,6 +160,7 @@ border-radius: 25px;
   border: 4px dotted #3f51b5;
   padding: 15px;
   border-radius: 25px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 #show-fav-btn, #search-btn{
