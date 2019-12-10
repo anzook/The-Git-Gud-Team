@@ -15,7 +15,6 @@
   background-color: dodgerblue;
 }
 
-
 #mainNav a{
   color: white;
   font-weight: bold;
@@ -168,4 +167,3 @@ border-radius: 25px;
 .mdl-list__item-avatar, .mdl-list__item-avatar.material-icons{
   color: #fcfcfcfa;
 }
-
