@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
             queryParamsadunza.where = 'philadelphia';
         } else if (document.getElementById('list-option-3').checked) {
             queryParamsadunza.where = 'washington, dc';
+        } else if (document.getElementById('list-option-4').checked) {
+            queryParamsadunza.where = 'columbia, md';
         }
 
 
@@ -136,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
                 // favoriteDiv.append(favoriteLabel);
 
                 newJob.append(jobTitleDiv).append(jobCompany).append(jobInfo).append(jobLinkDiv).append(favoriteDiv);
-   
+
                 $("#job-results").append(newJob);
             }
 
@@ -288,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
         //     // }
         // }).then(function (response) {
         //     console.log(response);
-        //     // var data = JSON.parse(body);  
+        //     // var data = JSON.parse(body);
         // });
 
     });
@@ -311,7 +313,9 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
 
 
         for (var i = 0; i < 8; i++) {
+            var newsDiv = $("<div>");
             var newTitle = $("<a>");
+            console.log(response.articles[i].url);
             newTitle.attr("href", response.articles[i].url);
             newTitle.attr("target", "_blank");
             newTitle.attr("class", "articleTitleText");
@@ -319,15 +323,16 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
             newTitle.text(response.articles[i].title);
             var description = $("<p>");
             description.text(response.articles[i].description);
-            $("#newsList").append(newTitle);
-            $("#newsList").append(description);
+            newsDiv.append(newTitle);
+            newsDiv.append(description);
+            $("#newsList").append(newsDiv);
         }
 
     });
 
 
 
-    // OTHER APIs 
+    // OTHER APIs
     //     //Authenticjob API flow
     // var appKeyAuthenJobs = "fac0ec7c2a95cae17ed197bb9b3ad80a"
 
@@ -373,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
     //     // (in addition to clicks). Prevents the page from reloading on form submit.
     //     event.preventDefault();
 
-    //     // var request = require('request');  
+    //     // var request = require('request');
 
     //     var host = 'data.usajobs.gov';
     //     var userAgent = 'alexnzook@gmail.com';
@@ -400,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function (event) {  //waits for pa
     //         }
     //     }).then(function (response) {
     //         console.log(response);
-    //         // var data = JSON.parse(body);  
+    //         // var data = JSON.parse(body);
     //     });
 
     // });
