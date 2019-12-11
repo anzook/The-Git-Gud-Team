@@ -20,11 +20,18 @@
   font-weight: bold;
   padding-left: 30px;
 }
+
  #picGrid {
-  background: linear-gradient(0deg, rgba(31, 75, 197, 0.3),rgba(31, 75, 197, 0.3)), url('./images/hero_baltimore_inner_harbor.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-height: 200px;
+  /* background: linear-gradient(0deg, rgba(31, 75, 197, 0.3),rgba(31, 75, 197, 0.3)), url('./images/hero_baltimore_inner_harbor.jpg'); */
+  background-image: url("./images/hero_baltimore_inner_harbor.jpg") bottom center no-repeat;
+  /* background-size: auto 200px; */
+   /* background-repeat: no-repeat; */
+  /* width: 100%; */
+  /* overflow: hidden; */
+  /* display: flex; */
+  /* justify-content: center;  */
+  object-fit: cover;
+  /* max-height: 200px;  */
   z-index: -1;
 }
 
@@ -88,6 +95,7 @@
 #news{
   margin: 0px;
   padding: 0px;
+   z-index: 2;
 }
 
 
@@ -99,7 +107,8 @@
   text-decoration: none;
   
 }
-a.articleTitleText:hover{
+
+.articleTitleText:hover{
   text-decoration: underline;
 }
 
@@ -158,7 +167,12 @@ border-radius: 25px;
   border: 4px dotted #3f51b5;
   padding: 15px;
   border-radius: 25px;
+  z-index: 3;
 }
+
+/* #news_container {
+  z-index: 2;
+} */
 
 #show-fav-btn, #search-btn{
   background: #3f51b5;
@@ -166,7 +180,8 @@ border-radius: 25px;
 
 .mdl-list__item-avatar, .mdl-list__item-avatar.material-icons{
   color: #fcfcfcfa;
+}
 
-.mdl-layout__container {
-  height: unset;
+.mdl-layout__container{
+  max-height: 300px;
 }
