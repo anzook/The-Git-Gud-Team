@@ -23,15 +23,15 @@
 
  #picGrid {
   /* background: linear-gradient(0deg, rgba(31, 75, 197, 0.3),rgba(31, 75, 197, 0.3)), url('./images/hero_baltimore_inner_harbor.jpg'); */
-  background-image: url(../assets/images/hero_baltimore_inner_harbor.png) bottom center no-repeat;
+  background: url(../assets/images/hero_baltimore_inner_harbor.png) bottom center no-repeat;
   /* background-size: auto 200px; */
-   background-repeat: no-repeat;
-  /* width: 100%; */
+   /* background-repeat: no-repeat; */
+  /* width: 100vw; */
   /* overflow: hidden; */
   /* display: flex; */
   /* justify-content: center;  */
-  object-fit: cover;
-  /* max-height: 200px;  */
+  /* object-fit: cover; */
+  max-height: 200px; 
   z-index: -1;
 }
 
